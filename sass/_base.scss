@@ -1,13 +1,263 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
-@import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css');
 
 
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
+body {
+	font-family: $font-sans;
+	color: $color-text-dark;
+	background-color: $gray;
+	line-height: 1.4;
+	min-width: 1000px;
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
+main {
+	padding-top: $navbar-height-full;
+}
+
+a {
+	text-decoration: none;
+	color: $color-text-light;
+	margin-right: 20px;
+	@include transition(all, 0.3s);
+}
+
+a:hover {
+	cursor: pointer;
+	color: $color-text-dark;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+.selected {
+	border-bottom: 2px solid $navbar-url;
+	color: $color-text-light;
+}
+
+#navbar {
+	background-color: $color-primary;
+	color: $color-text-light;
+	width: 100%;
+	height: $navbar-height-full;
+	font-family: $font-sans;
+	line-height: $navbar-height-full;
+	position: fixed;
+	z-index: 999;
+	@include box-shadow(0, 2px, 4px, 2px, rgba(0,0,0,0.12));
+	@include transition(height, 0.3s);
+	
+	h1 {
+		float: left;
+		padding-left: 20px;
+		@include transition(all, 0.3s);
+	}
+
+	nav {
+		float: right;
+
+		a {
+			color: $navbar-url;
+			margin-right: 20px;
+			text-transform: uppercase;
+			@include transition(all, 0.3s);
+		}
+
+		a:hover {
+			cursor: pointer;
+			color: $color-text-light;
+		}
+	}
+}
+
+#navbar.smaller {
+	height: $navbar-height-small;
+	line-height: $navbar-height-small;
+
+	h1 {
+	  font-size: 1.5rem;
+	}
+}
+
+.circular-image {
+	@include border-radius(50%);
+}
+
+#profile-picture {
+	width: 200px;
+	margin-bottom: 20px;
+}
+
+video {
+	position: absolute;
+	width: 100%;
+	z-index: -100;
+}
+
+.edu-image {
+	height: 200px;
+
+	padding: 20px;	
+}
+
+.project-image {
+	width: 300px;
+	height: 200px;
+	margin: 20px;	
+}
+
+.center {
+	text-align: center;
+}
+
+header {
+	min-height: calc(100vh - 120px); //learned about vh here http://stanhub.com/how-to-make-div-element-100-height-of-browser-window-using-css-only/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: $color-analogous;
+	// background: url("/img/background.jpg") no-repeat fixed;
+	// @include background-size(cover);
+	color: $color-text-light;
+}
+
+.clear{
+	clear: both;
+} 
+
+.left {
+	float: left;
+	width: 50%;
+}
+
+.right {
+	float: right;
+	width: 50%;
+}
+
+#education {
+	overflow: hidden;
+	padding-top: 40px;
+	padding-bottom: 60px;
+	min-height: calc(100vh - 120px);
+	color: $color-text-light;
+	background-color: $color-analogous;
+	background: url("/img/siebel.jpg") no-repeat fixed;
+	@include background-size(cover);
+}
+
+.padding {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+footer {
+	height: 100px;
+	background-color: $color-text-dark;
+	color: $color-text-light;
+	display: flex; // flexbox from here: http://css-tricks.com/centering-css-complete-guide/
+	flex-direction: column;
+	justify-content: center;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+#contact {
+	overflow: hidden;
+	padding-top: 60px;
+	padding-bottom: 80px;
+	background-color: $color-analogous;
+	color: $color-text-light;
+}
+
+#projects {
+	color: $color-text-dark;
+	overflow: hidden;
+	padding-top: 40px;
+	padding-bottom: 60px;
+	background-color: $gray;
+}
+
+.modal-link:hover {
+	cursor: pointer;
+}
+
+#modal {
+	
+	visibility: hidden;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width:100%;
+	height:100%;
+	text-align:center;
+	z-index: 1000;
+	background-image:url("/img/modal-bg.png");
+	display: flex; // flexbox from here: http://css-tricks.com/centering-css-complete-guide/
+	flex-direction: column;
+	justify-content: center;
+
+	div {
+		width: 80%;
+		height: calc(100vh - 120px);
+		background-color: $gray;
+		// width:300px;
+		// height: 200px;
+		margin: 100px auto;
+		padding:15px;
+		text-align:center;
+		@include border-radius(2px);
+		@include box-shadow(0, 8px, 16px, 6px, rgba(0,0,0,0.21));
+	}
+}
+
+ul {
+	overflow: hidden;
+	display: inline-block;
+	width: 80%;
+	padding-left: 10%
+}
+
+li {
+	line-height: 5rem;
+	float: left;
+	display: inline;
+	text-align: left;
+}
+
+#triple li  { 
+	width: 33.333%; 
+}
+
+.center-block {
+	margin: 0 auto;
+}
+
+.fa {
+	vertical-align: middle;
+	padding-right: 5px;
+}
+
+// three column solution based on: http://stackoverflow.com/questions/20566660/3-column-layout-html-css
+.column-left{ float: left; width: 33.3%; }
+.column-right{ float: right; width: 33.3%; }
+.column-center{ display: inline-block; width: 33.3%; }
+
+.modal-link {
+	// @include box-shadow(0, 2px, 4px, 2px, rgba(0,0,0,0.12));
 }
