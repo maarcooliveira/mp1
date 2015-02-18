@@ -15,9 +15,11 @@
 			<a href="#intro">Intro</a>
 			<a href="#education">Edu</a>
 			<a href="#projects">Projects</a>
+			<a href="#about">+me</a>
 			<a href="#contact">Contact</a>
 		</nav>
 	</div>
+	
 	<main>
 
 		<header id="intro">
@@ -29,16 +31,15 @@
 			</div>
 		</header>
 
-		<div id="education" class="clear">
+		<div id="education">
 			<h1 class="center upper">Education</h1>
-			<p class="center">My academic life here</p>
+			<p class="center">This is my academic life</p>
 			<br><br>
 			<div class="center left">
 				<img class="edu-image" src="img/uiuc-logo.png">
 				<h3 class="bold">University of Illinois at Urbana-Champaign</h3><br>
 				<p class="padding">Hail to the orange, hail to the blue! Studying here since Fall 2014 with a scholarship from the Brazilian government, it has been an amazing time to take different courses and have great life experiences.</p>
 			</div>
-			
 			<div class="center right">
 				<img class="edu-image" src="img/ufscar-logo.png">
 				<h3 class="bold">Universidade Federal de Sao Carlos</h3><br>
@@ -46,41 +47,50 @@
 			</div>
 		</div>
 
-
 		<div id="projects">
 			<h1 class="center upper">Projects</h1>
 			<p class="center">This is what I've been doing</p>
 			<br>
 			<div class="center column-left">
-				<img class="modal-link project-image" src="img/urbana-project.png" alt="Urbana Green Map project banner">
+				<img id="green-map" class="modal-link clickable project-image" src="img/urbana-project.png" alt="Urbana Green Map project banner">
 			</div>
 			<div class="center column-center">
-				<img class="modal-link project-image" src="img/heatmapp-project.png" alt="UIUC HeatMapp project banner">
+				<img id="heatmapp" class="modal-link clickable project-image" src="img/heatmapp-project.png" alt="UIUC HeatMapp project banner">
 			</div>
 			<div class="center column-right">
-				<img class="modal-link project-image" src="img/undergrad-project.png" alt="Undergrad Research project banner">
+				<img id="research" class="modal-link clickable project-image" src="img/undergrad-project.png" alt="Undergrad Research project banner">
 			</div>
 			<br>
 			<div class="center column-left">
-				<img class="modal-link project-image" src="img/tracker-project.png" alt="Watch and Track project banner">
+				<img id="wnt" class="modal-link clickable project-image" src="img/tracker-project.png" alt="Watch and Track project banner">
 			</div>
 			<div class="center column-center">
-				<img class="modal-link project-image" src="img/weather-project.png" alt="Weather App project banner">
+				<img id="weather" class="modal-link clickable project-image" src="img/weather-project.png" alt="Weather App project banner">
 			</div>
 			<div class="center column-right">
-				<img class="modal-link project-image" src="img/website-project.png" alt="Web Programming project banner">
+				<img id="web" class="modal-link clickable project-image" src="img/website-project.png" alt="Web Programming project banner">
 			</div>
-
 		</div>
 		
-		<div class="carousel-container"></div>
+		<div id="about" class="center">
+			<h1 class="upper">More about me</h1>
+			<p>Some facts that you may like to know</p>
+			<br>
+			<ul id="carousel">
+				<li><img src="img/obmep-banner.png"></li>
+				<li><img src="img/ui-banner.png"></li>
+				<li><img src="img/third-banner.png"></li>
+			</ul>
+			<div id="slide-left" class="clickable left"><i class="fa fa-chevron-left fa-2x"></i></div>
+			<div id="slide-right" class="clickable right"><i class="fa fa-chevron-right fa-2x"></i></div>
+		</div>
 		
 		<div id="contact">
 			<h1 class="center upper">Contact</h1>
 			<p class="center">I am almost everywhere. Seriously.</p>
 			<br><br>
 			<div class="center">
-				<ul id="triple">
+				<ul id="triple" class="multi-column-list">
 					<li><a href="http://fb.me/maarcooliveira" target="_blank"><i class="fa fa-facebook-official fa-2x"></i> maarcooliveira</a></li>
 					<li><a href="http://twitter.com/maarcooliveira" target="_blank"><i class="fa fa-twitter fa-2x"></i> maarcooliveira</a></li>
 					<li><a href="https://plus.google.com/+MarcoOliveiraM" target="_blank"><i class="fa fa-google-plus fa-2x"></i> MarcoOliveiraM</a></li>
@@ -96,17 +106,113 @@
 				</ul>
 			</div>
 		</div>
+
+		<div id="video-container">
+			<video autoplay loop>
+				<source src="https://dl.dropbox.com/s/kgyq64t0hk05svs/video.mp4" type="video/mp4">
+			</video>
+		</div>		
 		
-		<footer class="center">
+		<footer class="center clear">
 			<p><i class="fa fa-code fa-lg"></i> by myself. Pretty awesome, huh?</p>
-			<!-- <video autoplay loop>
-				 <source src="img/videoplayback.mp4" type="video/mp4">
-			</video> -->
 		</footer>
 
-		<div id="modal">
+		<div class="modal" id="green-map-modal">
 			<div>
-				<h2>More details soon</h2>
+				<h2 class="center">Urbana Green Map</h2><br>
+				<p>In a Learning in Community class at UIUC, in partnership with the city of Urbana, IL, we developed a Green Map (map containing all the environmentally friendly infrastructure available in the city) and also a mobile application to help the students in the address gathering process.</p>
+				<br>
+				<p>See the project live: <a href="https://guarded-castle-6498.herokuapp.com/index.html" target="_blank">Green Urbana</a></p>
+				<br>
+				<h4 class="bold">What I worked with</h4>
+				<ul>
+					<li>HTML/CSS</li>
+					<li>Web Starter Kit</li>
+					<li>Google Maps JavaScript API</li>
+					<li>Android development</li>
+					<li>Google Maps Android API</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="modal" id="heatmapp-modal">
+			<div>
+				<h2 class="center">HeatMapp</h2><br>
+				<p>Android application developed as a final project for my User Interface Design class at UIUC, in a group with three more students. Since the interface was the most important for the project, the backend of the app was not developed. The idea of this app is to gather the user's location and show it anonymously in a map, so other users can have an idea about how crowded a place is. It is also supposed show pictures taken in the most crowded places around the campus.</p>
+				<br>
+				<p>See the code on Github: <a href="https://github.com/maarcooliveira/HeatMapp" target="_blank">HeatMapp</a></p>
+				<br>
+				<h4 class="bold">What I worked with</h4>
+				<ul>
+					<li>Android development</li>
+					<li>UI and UX prototyping</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="modal" id="research-modal">
+			<div>
+				<h2 class="center">Undergrad Research</h2><br>
+				<p>Undergraduate Research that I participated while sudent at UFSCar. I was part of the Smart Cities and Internet of Things research group and developed a Database, Android NFC app and a Webservice connecting them, proposing a system to replace the current university control of entrance in the Dining Hall. This project was funded by the National Counsel of Technological and Scientific Development and last about a year and a half.</p>
+				<br>
+				<br>
+				<h4 class="bold">What I worked with</h4>
+				<ul>
+					<li>Android development</li>
+					<li>Android NFC library</li>
+					<li>ksoap2-android library</li>
+					<li>SOAP webservice</li>
+					<li>JavaDB database</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="modal" id="wnt-modal">
+			<div>
+				<h2 class="center">Watch and Track</h2><br>
+				<p>Google Chrome extension developed as my final project for the Programming Studio class. It is an automatic tracker that identifies what a user is watching on Netflix and automatically checkin the movie or show in Trakt.tv. At this time, the Trakt.tv API has changed, and the extension still using the old API calls. It may be fixed as soon as I get some free time.</p>
+				<br>
+				<p>See the code on Github: <a href="https://github.com/maarcooliveira/watch-n-track" target="_blank">Watch and Track</a></p>
+				<br>
+				<h4 class="bold">What I worked with</h4>
+				<ul>
+					<li>Chrome extension development</li>
+					<li>JavaScript</li>
+					<li>HTML/CSS</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="modal" id="weather-modal">
+			<div>
+				<h2 class="center">Weather App</h2><br>
+				<p>An Android Weather application that I developed for an internship position as Android developer. It is just a basic application and weather for just one location can be seen at a time. The purpose of this app was to follow the main guidelines of Google's Material Design. The OpenWeatherMap.org's API was used in this project.</p>
+				<br>
+				<p>See the code on Github: <a href="https://github.com/maarcooliveira/Weather" target="_blank">Weather App</a></p>
+				<br>
+				<h4 class="bold">What I worked with</h4>
+				<ul>
+					<li>Android development</li>
+					<li>Some Material Design guidelines</li>
+					<li>OpenWeatherMap API</li>
+					<li>JSON parsing</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="modal" id="web-modal">
+			<div>
+				<h2 class="center">This page</h2><br>
+				<p>Yes! This webpage (to rule them all) started as an MP for my Web Programming class at UIUC. Since I never had time to do something that I really liked as my personal page, this was my chance! Just basic jQuery, SASS and some hard work created this page that you are visiting now. Hope you liked it!</p>
+				<br>
+				<br>
+				<h4 class="bold">What I worked with</h4>
+				<ul>
+					<li>HTML</li>
+					<li>CSS/SASS</li>
+					<li>JavaScript/jQuery</li>
+					<li>Some UI knowledge from my past semester</li>
+				</ul>
 			</div>
 		</div>
 
